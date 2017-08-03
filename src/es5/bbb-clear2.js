@@ -1,18 +1,5 @@
-// //Keywords
-// let demo = 'variable';
-// const fijo = 'const';
 
-// //arrow functions
-
-// demo = ()=>{
-
-// 	for(let x = 0; x < 5; x++){
-// 		console.log(x);
-// 	}
-
-// };
-
-jQuery(document).ready(function($) {
+jQuery(document).ready(($) =>{
 	$('.navbar-toggle').click(function() {
 		$('.container-items, .overlay-items').addClass('active');
 	});
@@ -25,5 +12,53 @@ jQuery(document).ready(function($) {
 	$(this).hide();
 	$('.visualvideo').hide();
 });
-	// console.log('hola');
+});
+jQuery(document).ready( () =>{
+	const $form = jQuery('#form');
+	//Ubicacion de mensaje de error//
+	// const errorPlacement = (error, element)=>{
+	// 	error.insertAfter(element.parent())
+	// };
+	//metodo para aceptar texto con espacios y caracteres especiales
+	jQuery.validator.addMethod('letras', function(val, el){
+		return this.optional(el) || /^[a-z" "ñÑáéíóúÁÉÍÓÚ,.;]+$/i.test(val);
+	});
+
+
+	$form.validate({
+		errorElement: 'div',
+		errorClass: 'msn-place',
+
+		rules: {
+		  nombre: 			{required:true,letras:true},
+		  email: 			{required:true,	email:true},
+		  numero: 			{ required:true, digits:true, minlegth:7},
+		  mensaje: 			{ required:true },
+		  aceptar: 			{ required:true }
+
+		},
+	messages: {
+		  nombre: {
+		  	required:'Indica un nombre',
+		  	letras:'solo se acepta texto'
+		  },
+		  email: {
+		  	required:'Indica un corre electr&oacute;nico',
+		  	email:'formato inv&aacute;lido'
+		  },
+		  numero:{
+		  	required:'Indica un n&uacute;mero',
+		  	digits:'solo se acepta n&uacute;meros',
+		  	minlegth: 'M&iacutenimo siete n&uacute;meros'
+		  },
+		  mensaje:{
+		  	required:'Escribe un mensaje'
+		  },
+		  aceptar:{
+		  	required:'Acepta los t&eacute;rminos',
+		  }
+
+		}
+		// errorPlacement
+	});
 });

@@ -12,24 +12,24 @@ block description
 block content
 	section.container-fluid.container-formulario
 		div.row
-			form.content-form
+			form#form.content-form
 				div.form
 					h1.titulo-contacto Contacto
 					div.form.form-nombre
 						label(for="nombre") Nombre
-						input(type="text", id="nombre", name="nombre" required)
+						input(type="text", id="nombre", name="nombre")
 					div.form.form-email
 						label(for="email") Email
-						input(type="email", id="email", name="email" required)
+						input(type="email", id="email", name="email" )
 					div.form.form-numero
 						label(for="numero") Número
-						input(type="number" id="numero", name="numero" min="0", minlength="7" required)
+						input(type="number" id="numero", name="numero" min="0", minlength="7" )
 					div.form.form-mensaje
 						label(for="mensaje") Mensaje
-						textarea(id="mensaje", name="mensaje")
+						textarea(id="mensaje", name="mensaje" )
 					div.form.form-aceptar
-						input(type="checkbox" id="aceptar" name="aceptar" required)
 						label(for="aceptar")
+						input(type="checkbox" id="aceptar" name="aceptar" )
 						p.aceptar-terminos Acepto términos y condiciones
 						button.btn.btn-submit(type="submit") Enviar
 			ul.redes-desk.content-redes
@@ -46,3 +46,5 @@ block content
 
 block Scripts
 	//-Acá se ponen js que solo vayan en ésta página
+	//- scirpt
+	//- 	jQuery('#form').validate();

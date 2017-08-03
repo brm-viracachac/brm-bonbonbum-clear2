@@ -251,28 +251,28 @@
   <!--/-Header-->
   <section class="container-fluid container-formulario">
     <div class="row">
-      <form class="content-form">
+      <form class="content-form" id="form">
         <div class="form">
           <h1 class="titulo-contacto">Contacto</h1>
           <div class="form form-nombre">
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <input type="text" id="nombre" name="nombre">
           </div>
           <div class="form form-email">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email">
           </div>
           <div class="form form-numero">
             <label for="numero">Número</label>
-            <input type="number" id="numero" name="numero" min="0" minlength="7" required>
+            <input type="number" id="numero" name="numero" min="0" minlength="7">
           </div>
           <div class="form form-mensaje">
             <label for="mensaje">Mensaje</label>
             <textarea id="mensaje" name="mensaje"></textarea>
           </div>
           <div class="form form-aceptar">
-            <input type="checkbox" id="aceptar" name="aceptar" required>
             <label for="aceptar"></label>
+            <input type="checkbox" id="aceptar" name="aceptar">
             <p class="aceptar-terminos">Acepto términos y condiciones</p>
             <button class="btn btn-submit" type="submit">Enviar</button>
           </div>
@@ -379,6 +379,5 @@
   <!--Scripts-->
   <script src="js/libs/jquery.js"></script>
   <script src="js/libs.min.js"></script>
-  <script src="js/bbb-clear2.min.js"></script>
   <script src="js/bbb-clear2.js"></script>
 </body></html>
