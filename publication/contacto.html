@@ -254,6 +254,9 @@
       <form class="content-form" id="form">
         <div class="form">
           <h1 class="titulo-contacto">Contacto</h1>
+          <div class="form alertas">
+            <p>Tu mensaje <span class="mensaje-alerta"></span></p>
+          </div>
           <div class="form form-nombre">
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre">
@@ -271,9 +274,10 @@
             <textarea id="mensaje" name="mensaje"></textarea>
           </div>
           <div class="form form-aceptar">
-            <label for="aceptar"></label>
             <input type="checkbox" id="aceptar" name="aceptar">
-            <p class="aceptar-terminos">Acepto términos y condiciones</p>
+            <label class="l-acepta-terminos" for="aceptar">
+              <p class="aceptar-terminos">Acepto términos y condiciones</p>
+            </label>
             <button class="btn btn-submit" type="submit">Enviar</button>
           </div>
         </div>

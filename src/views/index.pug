@@ -21,7 +21,9 @@ block content
 				-for (var i=1; i<19; i++)
 					div.thumb-instagram
 						a.invisible-button(type="button" data-toggle="modal" data-target="#myModal")
-						+image("thumb-instagram.jpg", 'Video Instagram')(class="img-responsive")
+						div.thumb-content-instagram
+							//- img(src="https://pp.userapi.com/c629327/v629327473/db66/r051joYFRX0.jpg")
+							+image("thumb-instagram.jpg", 'Video Instagram')(class="img-responsive")
 						p.user-instagram @mariamaya
 				div.modal.fade.bd-example-modal-sm(id="myModal" tabindex='-1', role='dialog', aria-labelledby='mySmallModalLabel', aria-hidden='true')
 					div.modal-dialog

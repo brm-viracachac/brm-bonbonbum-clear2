@@ -5,16 +5,20 @@ jQuery(document).ready(($) =>{
 	});
 	$('.glyphicon-arrow-left, .overlay-items').click(function() {
 		$('.container-items, .overlay-items').removeClass('active');
-	});
+});
 	$('#btn-play').click(function() {
 	$('.padding-imagen').removeClass('padding-imagen');
 	$('.envevisto').removeClass('hidden').html('<iframe width="500" height="500" src="https://www.youtube.com/embed/LhcT_Lf3hVQ?rel=0&autoplay=1" frameborder="0" allowfullscreen="" class="embed-responsive-item"></iframe>');
 	$(this).hide();
 	$('.visualvideo').hide();
 });
+	/// muestra mensaje de enviado
+	var mensaje = ['no fue enviado', 'fue enviado exitosamente']
+	$('.btn-submit').click(function() {
+		$('.form.alertas').addClass('active');
+		$('.form.alertas p span').html(mensaje[0])
 });
-jQuery(document).ready( () =>{
-	const $form = jQuery('#form');
+		const $form = jQuery('#form');
 	//Ubicacion de mensaje de error//
 	// const errorPlacement = (error, element)=>{
 	// 	error.insertAfter(element.parent())
