@@ -121,7 +121,7 @@
 				border 0
 				padding 1rem 2rem 1rem 8rem
 				width 100%
-				color gray
+				color Black
 				transitionBase()
 				&:focus, &:hover, &:visited, &:active
 					z-index 1
@@ -509,6 +509,15 @@
 			bottom -5%
 			right 23%
 			width 31%
+@media (max-width:1299px)
+	.container-items
+		padding-top 1rem
+		.nav
+			&-left, &-right
+
+				li
+					a
+						font-size 1.5rem
 @media (min-width:1300px) 
 	.nav
 		&-left, &-right
@@ -526,6 +535,10 @@
 			bottom -5%
 			right 23%
 			width 31%
+@media (min-width:1528px)
+	.nav
+		&-left
+			margin-top 0
 
 @media (min-width:1920px) and (min-height:600px)
 	.img
